@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>gayatori-san's cyber blog</title>
+<title>Mobile Commerce + UPI</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#fff3de;--panel:#fffdf8;--line:#f4d6a8;--text:#26343a;--mute:#66767a;--accent:#e0563a;--warn:#a85a00;--code:#ffe9c4;
@@ -17,7 +17,7 @@ body{margin:0;background:var(--bg);background-image:radial-gradient(var(--line) 
 h1,h2,h3,button{font-family:Fredoka,ui-rounded,system-ui,sans-serif}
 pre,code{font-family:ui-monospace,Menlo,Consolas,monospace}
 .hero{padding:28px 0 26px}
-.hero:before{content:"🌈 ✨ 🔐 🐧 🌼";display:block;font-size:28px;letter-spacing:8px;margin-bottom:10px}
+.hero:before{content:"📱 ✨ 💸 🛒 ⚡";display:block;font-size:28px;letter-spacing:8px;margin-bottom:10px}
 .hero h1{font-size:clamp(30px,8vw,44px);line-height:1.12;margin:0 0 12px;letter-spacing:-.02em}
 .sub{color:var(--mute);margin:0}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
@@ -46,143 +46,42 @@ a{color:var(--accent)}
 <body>
 <div class="wrap">
 <header class="hero">
-<h1>Cyber blog for beginners 🔐💻</h1>
-<p class="sub">Security basics and Linux commands, explained like a friend would. Learn it, verify it, practise it safely.</p>
+<h1>Mobile Commerce + UPI 📱💸</h1>
+<p class="sub">The technology behind OneTap Shopping, explained step-by-step.</p>
 </header>
 
 <nav class="tabs" role="tablist">
-<button role="tab" id="t1" aria-selected="true" aria-controls="p1">🔐 Post 1: Cybersecurity for beginners</button>
-<button role="tab" id="t2" aria-selected="false" aria-controls="p2">🐧 Post 2: Linux commands for security beginners</button>
+<button role="tab" id="t1" aria-selected="true" aria-controls="p1">💸 The Tech Behind OneTap</button>
 </nav>
 
 <article id="p1" role="tabpanel" aria-labelledby="t1">
-<h2>Cybersecurity for beginners: how to not get hacked (no cap) 🛡️</h2>
-<p class="meta">5 min read • for absolute beginners</p>
-<p>How many times today did you unlock your phone, log into something, or pay via UPI? 📱💸 Each one is worth protecting. Cybersecurity is keeping your devices, accounts and data away from people who shouldn't have them. You don't need a dark hoodie to get it, just the right mental model. 🧠✨</p>
+<h2>The Technology Behind OneTap Shopping 🚀</h2>
+<p class="meta">5 min read • Fintech Basics</p>
+<p>Mobile commerce coupled with Unified Payments Interface (UPI) integration has profoundly changed the checkout experience, reducing what used to be a multi-step, form-heavy process into a near-instant "one-tap" transaction. Here is how the underlying technology works to achieve this speed and convenience:</p>
 
-<h3>🔺 The CIA triad (not the spy one 😭)</h3>
-<ul>
-<li>🤐 <strong>Confidentiality:</strong> only the right people see the data. Your DMs stay yours.</li>
-<li>✅ <strong>Integrity:</strong> nobody secretly changes the data. Your bank transfer amount stays the same.</li>
-<li>⚡ <strong>Availability:</strong> systems work when you need them. The exam portal doesn't crash from an attack.</li>
-</ul>
-<p>Next time you read about a breach, ask which of the three got broken. Instant brain upgrade. 📈</p>
+<h3>🔗 1. Intent Calls & Deep Linking</h3>
+<p>Traditional mobile payments required navigating away from the shopping app to a separate payment gateway page. UPI integration replaces this with an "Intent" flow.</p>
+<p>When you tap "Pay with UPI," the merchant application generates a UPI URI string containing all transaction details. Using mobile OS deep-linking protocols, the merchant app directly invokes your preferred UPI application (like GPay, PhonePe, or Paytm) installed on the same device. This happens instantly, bypassing the need for an intermediate web gateway.</p>
 
-<h3>🚨 Threats you'll actually meet</h3>
-<ul>
-<li>🎣 <strong>Phishing:</strong> a fake message from your "bank", college or delivery app. It always creates panic ("blocked in 2 hours!!"). Panic is the trap.</li>
-<li>🔑 <strong>Weak and reused passwords:</strong> one site leaks yours and attackers try it everywhere else (credential stuffing).</li>
-<li>🦠 <strong>Malware:</strong> hides in cracked apps, random APKs and attachments. Ransomware locks your files until you pay.</li>
-<li>🎭 <strong>Social engineering:</strong> hacking the human, not the computer. A fake "support agent" calls you.</li>
-<li>🕸️ <strong>Unpatched software:</strong> old apps have known bugs, and attackers love them.</li>
-</ul>
+<h3>📱 2. Device Binding & Biometric Authentication</h3>
+<p>A core feature of the UPI ecosystem is strict device binding. When you register a UPI app, it binds your mobile number, device hardware ID, and bank account together.</p>
+<p>Because the UPI app already knows it is running on the authorized device, it skips traditional login screens. Instead, it relies on the device's native biometric sensors (fingerprint or Face ID) or a secure device PIN to authorize access in milliseconds.</p>
 
-<h3>💅 Your glow-up checklist</h3>
-<ol>
-<li>🗝️ Use a password manager. Make every password unique and long.</li>
-<li>📲 Turn on MFA for email, socials and banking. Authenticator apps beat SMS.</li>
-<li>🔄 Update phone, laptop, browser and apps. Switch on auto-updates.</li>
-<li>🧐 Pause before you click, and <strong>never share your OTP. Ever.</strong> 🚫</li>
-<li>🏪 Install apps from official stores only. No cracked software, bestie.</li>
-<li>☁️ Back up important files in two places.</li>
-<li>📶 Skip banking on public Wi-Fi, or use a VPN you trust.</li>
-</ol>
+<h3>🔐 3. The UPI PIN & Secure Enclave</h3>
+<p>Once the UPI app is open and the transaction details are confirmed on screen, you enter your UPI PIN.</p>
+<div class="note">⚠️ <strong>Crucial Security Detail:</strong> This PIN is never stored by the merchant app, the payment gateway, or the UPI app itself. It is captured securely and sent in encrypted form directly to the National Payments Corporation of India (NPCI) switch.</div>
+<p>The NPCI then routes it to your issuing bank, which validates the PIN against the device token to authenticate your intent to pay.</p>
 
-<ul class="check">
-<li>Unique password on my email 📧</li>
-<li>MFA on email and main socials 🔐</li>
-<li>Auto-updates on 🔄</li>
-<li>One backup of important files 💾</li>
-<li>I can spot a phishing message 🎣</li>
-</ul>
-<p>Next up: getting comfy in the terminal, because most security tools live there. 🐧</p>
-<p class="ref">📚 Reference: CISA, <em>Secure Our World</em> (cisa.gov), covering phishing, passwords, MFA and updates.</p>
+<h3>⚡ 4. Real-Time Settlement Infrastructure</h3>
+<p>Behind the scenes, the NPCI acts as the central clearinghouse. The flow of communication is highly optimized:</p>
+<pre><code>Request: Merchant App -> UPI App -> NPCI Switch -> Payer Bank
+Auth: User enters PIN -> Payer Bank validates & debits
+Settlement: Payer Bank -> NPCI -> Merchant Bank (Credited)
+Callback: NPCI -> UPI App -> Merchant App</code></pre>
+<p>This entire round-trip communication happens in seconds. As soon as the merchant's server receives the success callback from their payment aggregator, the shopping app immediately displays the "Order Confirmed" screen.</p>
 </article>
 
-<article id="p2" role="tabpanel" aria-labelledby="t2" hidden>
-<h2>Linux commands every security beginner should know 🐧</h2>
-<p class="meta">7 min read • practise on a VM</p>
-<p>Tools like Nmap, Wireshark and Metasploit are happiest in a Linux terminal. 🖤 Learn these commands and security tutorials stop looking like magic. 🪄</p>
-<div class="note">⚠️ <strong>Rule #1:</strong> practise only on your own machine or a VM. Never scan or test systems you don't own or lack permission to test.</div>
-
-<h3>📍 1. Know where you are</h3>
-<pre><code>pwd      # where am I?
-ls -la       # list files, incl. hidden
-cd /var/log  # go into a folder
-cd ..        # go up one level</code></pre>
-<p>Hidden files (starting with <code>.</code>) are where configs, and sometimes suspicious stuff, hide. 👀</p>
-
-<h3>🗂️ 2. Create, copy, move, delete</h3>
-<pre><code>mkdir notes
-touch file.txt
-cp file.txt backup.txt
-mv backup.txt old.txt
-rm old.txt     # no recycle bin!</code></pre>
-<p>Careful with <code>rm -rf</code>. No undo button. 😭</p>
-
-<h3>👓 3. Read files fast</h3>
-<pre><code>cat file.txt
-less bigfile.log      # q to quit
-head -n 20 file.log
-tail -n 20 file.log
-tail -f auth.log      # follow live 🔴</code></pre>
-<p><code>tail -f</code> is gold: watching logs in real time is a core SOC skill. 🕵️‍♀️</p>
-
-<h3>🔍 4. Search like a detective</h3>
-<pre><code>grep "failed" /var/log/auth.log
-grep -i "error" app.log
-grep -r "password" ~/projects
-find / -name "*.conf" 2>/dev/null</code></pre>
-
-<h3>🔒 5. Permissions</h3>
-<pre><code>ls -l script.sh
-chmod 700 script.sh     # owner only
-chmod +x script.sh      # make executable
-chown user:group file</code></pre>
-<p>In <code>-rwxr-xr--</code> the chunks are <strong>owner | group | everyone else</strong>. Setting everything to <code>777</code> is a classic misconfiguration. 🙅‍♀️</p>
-
-<h3>👤 6. Users and privileges</h3>
-<pre><code>whoami
-id
-sudo cmd    # run ONE command as admin</code></pre>
-<p>Use <code>sudo</code> only when needed. Living as root is the opposite of <em>least privilege</em>. 👑❌</p>
-
-<h3>⚙️ 7. Processes and system info</h3>
-<pre><code>ps aux
-top
-kill 1234
-uname -a
-df -h</code></pre>
-<p>Weird process eating your CPU? <code>ps aux</code> is where the investigation starts. 🔎</p>
-
-<h3>🌐 8. Networking basics</h3>
-<pre><code>ip a
-ping -c 4 google.com
-ss -tuln                      # listening ports
-curl -I https://example.com   # HTTP headers</code></pre>
-<p><code>ss -tuln</code> shows what's listening on <em>your</em> machine, a quick way to spot services you didn't mean to expose. 👁️</p>
-
-<h3>🔗 9. Pipes = combo moves</h3>
-<pre><code>cat auth.log | grep "Failed" | wc -l</code></pre>
-<p>The <code>|</code> feeds one command's output into the next. This counts failed login lines. ⚡</p>
-
-<h3>🆘 10. Get help</h3>
-<pre><code>man grep
-grep --help</code></pre>
-<p>Nobody memorises everything. Reading <code>man</code> pages is the real superpower. 📖</p>
-
-<h3>🎮 Practice challenge</h3>
-<ol>
-<li>📁 Make a folder, create 3 files and list them with <code>ls -l</code>.</li>
-<li>🔐 Change one file's permissions so only you can read it.</li>
-<li>🔍 Use <code>grep</code> to count a word in a log file.</li>
-<li>🌐 Run <code>ss -tuln</code> and work out what each port is.</li>
-</ol>
-<p>You don't need 200 commands. Master these ten groups, practise in a safe lab, and every command you understand makes you stronger. 💻🔐</p>
-<p class="ref">📚 Reference: GNU Project, <em>GNU Coreutils Manual</em> (gnu.org), covering file and text utilities and permissions.</p>
-</article>
-
-<footer>Made by Gayatri Giri, Sneha Gade, Siddhi Dolas, and Samyak Gawale 🖤 Only test systems you own or have permission to test.</footer>
+<footer>Made by Gayatri Giri, Sneha Gade, Siddhi Dolas, and Samyak Gawale 🖤</footer>
 </div>
 <script>
 var tabs=document.querySelectorAll('[role=tab]');
